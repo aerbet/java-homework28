@@ -21,6 +21,9 @@ public class Main {
         cats.removeIf(cat -> cat.isColor(Cat.Color.TABBY));
         Printer.print(cats);
 
+        System.out.println("============ Sorted by name length ============");
+        cats.removeIf(cat -> cat.isLonger(cat, 5));
+        Printer.print(cats);
         // А сюда добавьте код, который будет сортировать коллекцию котов
         // используйте лямбда-выражения и ссылки на методы
         // cats.sort(?);

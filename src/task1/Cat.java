@@ -68,5 +68,9 @@ final class Cat {
         return getColor().equals(color);
     }
 
+    public boolean isLonger(Cat cat, int number) {
+        return cat.getName().length() == number;
+    }
+
     /*********/
 }
