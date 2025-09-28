@@ -64,5 +64,9 @@ final class Cat {
         return c1.breed.compareTo(c2.breed);
     }
 
+    public boolean isColor(Color color) {
+        return getColor().equals(color);
+    }
+
     /*********/
 }

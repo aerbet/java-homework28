@@ -16,6 +16,11 @@ public class Main {
         System.out.println("============ Sorted by name and age ===========");
         cats.sort(Comparator.comparing(Cat::getName).thenComparing(Cat::getAge));
         Printer.print(cats);
+
+        System.out.println("================ Removed color ================");
+        cats.removeIf(cat -> cat.isColor(Cat.Color.TABBY));
+        Printer.print(cats);
+
         // А сюда добавьте код, который будет сортировать коллекцию котов
         // используйте лямбда-выражения и ссылки на методы
         // cats.sort(?);
