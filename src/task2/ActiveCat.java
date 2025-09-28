@@ -1,8 +1,8 @@
 package task2;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Supplier;
 
 // код можно менять только в особо отмеченных местах этого файла.
 // то есть там, где написаны три знака вопроса "???"
@@ -16,9 +16,9 @@ public final class ActiveCat {
             "Millie", "Daisy", "Jasper", "Misty", "Minka");
     private final String name;
 
-    private ??? action;
+    private Supplier<String> action;
 
-    public ActiveCat(??? action) {
+    public ActiveCat(Supplier<String> action) {
         name = names.get(r.nextInt(names.size()));
         this.action = action;
     }
@@ -28,7 +28,7 @@ public final class ActiveCat {
     }
 
     public void doAction() {
-        System.out.printf("Я %s. %s%n", name, action.perform());
+        System.out.printf("Я %s. %s%n", name, action.get());
     }
 
     /*****/
@@ -44,6 +44,18 @@ public final class ActiveCat {
 
     public static String eat() {
         return "Я кушаю!";
+    }
+
+    public static String play() {
+        return "Я играю!";
+    }
+
+    public static String hunt() {
+        return "Я охочусь!";
+    }
+
+    public static String mur() {
+        return "Я мурлыкаю!";
     }
     /*****/
 }
