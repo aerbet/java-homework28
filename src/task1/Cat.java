@@ -60,8 +60,11 @@ final class Cat {
 
     /*********/
 
-    // Ваш код может находится здесь
-    // остальную часть этого файла вы менять не можете
+    public static int byBreed(Cat e1, Cat e2) {
+        return e1.breed.compareTo(e2.breed);
+    }
+
+
 
     /*********/
 }
