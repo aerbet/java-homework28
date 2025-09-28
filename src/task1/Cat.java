@@ -60,11 +60,9 @@ final class Cat {
 
     /*********/
 
-    public static int byBreed(Cat e1, Cat e2) {
-        return e1.breed.compareTo(e2.breed);
+    public static int byBreed(Cat c1, Cat c2) {
+        return c1.breed.compareTo(c2.breed);
     }
-
-
 
     /*********/
 }
